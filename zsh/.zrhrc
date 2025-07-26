@@ -1,0 +1,11 @@
+ # oh-my-zsh
+source ./.zsh/oh-my-zsh.zsh
+
+# alias
+source ./.zsh/alias.zsh
+
+# completion
+source ./.zsh/completion.zsh
+
+# env
+source ./.zsh/env.zsh
