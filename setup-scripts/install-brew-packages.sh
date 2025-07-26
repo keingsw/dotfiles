@@ -20,4 +20,4 @@ brew install jq
 brew install mise
 
 # 完了メッセージ
-echo "🤛 Application installation complete!"
+echo "Brew packages installation complete!"
