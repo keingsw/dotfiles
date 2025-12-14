@@ -1,0 +1,68 @@
+command_timeout = 1000
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$golang\
+$docker_context\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold blue"
+
+[git_status]
+style = "bold yellow"
+conflicted = "⚔️ "
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+detect_files = ["package.json", ".node-version"]
+
+[python]
+symbol = " "
+style = "bold yellow"
+detect_files = ["requirements.txt", ".python-version", "Pipfile"]
+
+[rust]
+symbol = " "
+style = "bold red"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+
+[docker_context]
+symbol = " "
+style = "bold blue"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow)"

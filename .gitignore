@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# iTerm2 preferences (contains sensitive data)
+iterm2/com.googlecode.iterm2.plist
+
+# Backup files
+*.backup
